@@ -1,8 +1,13 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
+
+ import React from 'react' 
 import "./CheckOut.css"
 import Subtotal from './Subtotal'
+import CheckoutProduct from './CheckoutProduct'
+
+import { useStateValue } from '../providers/StateProvider';
 function CheckOut() {
+  const [{basket}] = useStateValue();
+  
   return (
     <div className='checkout'>
         <div className='checkout__left'>
@@ -10,9 +15,20 @@ function CheckOut() {
             <img className='checkout__ad'
             src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="" />
 
-            <h3>hello, </h3>
-            <h2 className='checkout__title'>your shopping basket</h2>
+            <h3>Hello, </h3>
+            <h2 className='checkout__title'>Your Shopping Basket</h2>
+            {basket.map(item => (
+                <CheckoutProduct
+                key = {item.id}
+                id={item.id}
+                title = {item.title}
+                image = {item.image}
+                price = {item.price}
+                rating = {item.rating}
+              />
+            ))}
         </div>
+
         <div className='checkout__right'>
             <Subtotal />
         </div>

@@ -1,16 +1,14 @@
 
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
+ import React from 'react'
 import './Home.css';
 import Product from '../products/Product';
 function Home() {
   return ( 
     <div className='home'>
         <div className='home__container'>
-
             <img className='home__image'
-            src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="image" />
-
+            src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71j8damPo5L._SX3000_.jpg" alt="image" />
+ 
             <div className='home__row'>
 
                 <Product 
@@ -20,8 +18,23 @@ function Home() {
                 rating={5}
                 image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
                 />
+
                 <Product
                 id="49538094"
+                title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+                price={239.0}
+                rating={4}  
+                image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+                 />
+                  <Product
+                id="49538093"
+                title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+                price={239.0}
+                rating={4}  
+                image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+                 />
+                  <Product
+                id="49538095"
                 title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
                 price={239.0}
                 rating={4}  

@@ -1,30 +1,29 @@
-// eslint-disable-next-line no-unused-vars
+
 import React from 'react'
 import './Subtotal.css'
-import CurrencyFormat from 'react-currency-format'
+import numeral from 'numeral';
+import { useStateValue } from '../providers/StateProvider';
 function Subtotal() {
+ 
+    const [{basket}, dispatch] = useStateValue();
+    const getBasketTotal = (basket) => 
+        basket?.reduce((amount, item) => item.price + amount, 0);
+    
+
+        const formattedSubtotal = numeral(getBasketTotal(basket)).format('$0,0.00');
   return (
     <div className='subtotal'>
 
-        <CurrencyFormat
-        renderText={(value) => (
-            <div>
-                <p>
-                {/* ({basket.length} */}
-                    Subtotal (0 items): <strong>{value}</strong>
-                </p>
-                <small className="subtotal__gift">
-                    <input type="checkbox" /> This order contains a gift
-                </small>
-            </div>
-        )}
-        decimalScale={2}
-        value={0}
-        // value={getBasketTotal(basket)}
-        displayType={"text"}
-        thousandSeparator={true}
-        prefix={"$"}
-        />
+     
+<p>
+      Subtotal ({basket.length} items): <strong>{formattedSubtotal}</strong>
+    </p>
+    <small className="subtotal__gift">
+      <input type="checkbox" /> This order contains a gift
+    </small>
+
+        
+
         <button>Proceed to Checkout</button>
     </div>
   )

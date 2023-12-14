@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import { initialState } from './components/Providers/Reducer.jsx'
+
+import reducer, {initialState} from './components/Providers/reducer'
+import { StateProvider } from './components/providers/StateProvider.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

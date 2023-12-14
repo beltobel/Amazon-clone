@@ -1,25 +1,51 @@
-// eslint-disable-next-line no-unused-vars
+
 import React from 'react'
-import "./Product.css"
-function Product(id, title, price, rating, image) {
+import './Product.css'
+import { useStateValue } from '../providers/StateProvider';
+
+function Product({id, title, price, rating, image}) {
+
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addBasket = () => {
+    dispatch(
+      {
+        type: "ADD_TO_BASKET",
+        item: {
+          id: id,
+          title: title,
+          image: image,
+          price: price,
+          rating: rating
+        },
+      });
+  };
+console.log("check")
   return (
     <div className='product'>
-       <div className='product__info'>
+      <div className='product__info'>
         <p>
-            <small>{title}</small>
-            <strong>{price}</strong>
+          <small>{title}</small>
+          <strong>{price}</strong>
         </p>
+        
         <div className='product__rating'>
-           { Array(rating).fill().map(() => (
-                // eslint-disable-next-line react/jsx-key
-                <p>⭐</p>
-            ))}
-        </div> 
-       </div>
-       <img 
-       src={image} alt="" />
+          {/* {Array(rating).fill().map((_, index) => (
+            <p key={index}>⭐</p>
+          ))} */}
 
-       <button>Add to Basket</button>
+          {Array(rating).fill().map(() => (
+            // eslint-disable-next-line react/jsx-key
+            <p>⭐</p>
+          ))}
+
+        </div>
+      </div>
+
+      <img
+        src={image} alt="no" />
+
+      <button onClick={addBasket}>Add to Basket</button>
     </div>
   )
 }
