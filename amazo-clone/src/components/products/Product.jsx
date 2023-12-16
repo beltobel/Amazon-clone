@@ -20,7 +20,7 @@ function Product({id, title, price, rating, image}) {
         },
       });
   };
-console.log("check")
+// console.log("check")
   return (
     <div className='product'>
       <div className='product__info'>

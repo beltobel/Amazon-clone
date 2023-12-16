@@ -7,38 +7,41 @@ function Home() {
     <div className='home'>
         <div className='home__container'>
             <img className='home__image'
-            src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71j8damPo5L._SX3000_.jpg" alt="image" />
+            src ="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/717RUPA1bDL._SX3000_.jpg"
+            // src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71j8damPo5L._SX3000_.jpg" alt="image"
+             />
  
             <div className='home__row'>
 
                 <Product 
                 id="12321341"
-                title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses"
-                price={11.96}
+                title="Andromeda, Princess of Ethiopia: The Legend in The Stars in Amharic and English  "
+                price= {4.99}
                 rating={5}
-                image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
+                
+                image="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61R2tZtsFkL._AC_UY218_.jpg"
                 />
 
                 <Product
                 id="49538094"
-                title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-                price={239.0}
+                title="MaxNova Beanie Hat Thick Warm Winter Hat Unisex"
+                price= {16.99}
                 rating={4}  
-                image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+                image="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/81Vu4m8AMmL._AC_UL320_.jpg"
                  />
                   <Product
                 id="49538093"
-                title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-                price={239.0}
+                title="[Kenwood] Kenwood kMix Picasso electric kettle Tea & Coffee Kettle Hot Water 1L 220V "
+                price= {179.99}
                 rating={4}  
-                image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+                image="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/31q01K-vhHL._AC_UY218_.jpg"
                  />
                   <Product
                 id="49538095"
-                title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-                price={239.0}
+                title="Garmin epix Gen 2, Premium active smartwatch, touchscreen AMOLED display, Adventure Watch with Advanced Features, Slate Steel "
+                price= {149.00}
                 rating={4}  
-                image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+                image="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71o1sLE513L._AC_UY218_.jpg"
                  />
             </div>
 
