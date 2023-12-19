@@ -30,14 +30,14 @@ function Product({id, title, price, rating, image}) {
         </p>
         
         <div className='product__rating'>
-          {/* {Array(rating).fill().map((_, index) => (
+          {Array(rating).fill().map((_, index) => (
             <p key={index}>⭐</p>
-          ))} */}
-
+          ))}
+{/* 
           {Array(rating).fill().map(() => (
             // eslint-disable-next-line react/jsx-key
             <p>⭐</p>
-          ))}
+          ))} */}
 
         </div>
       </div>

@@ -8,6 +8,7 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 
 import numeral from 'numeral';
 import axios from './axios';
+import { db } from '../firebase';
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue();
 
@@ -25,7 +26,7 @@ function Payment() {
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState(false);
 
-   
+    
         const [clientSecret, setClientSecret] = useState(true);
         useEffect(() => {
             const getClientSecret = async () => {
@@ -34,11 +35,12 @@ function Payment() {
                     url: `/payments/create?total=${getBasketTotal(basket) * 100}`
                 });
                 setClientSecret(response.data.clientSecret);
+                // console.log(response.data.clientSecret);
             };
             getClientSecret();
         }, [basket]);
     
-
+console.log(clientSecret);
     const handleSubmit =  async(e) => {
         e.preventDefault();
         setProcessing(true);
@@ -46,10 +48,23 @@ function Payment() {
             payment_method: {
                 card: elements.getElement(CardElement)
             }
-        }).then((paymentIntent) => {
+        }).then(({paymentIntent}) =>  {
+
+            db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id)
+            .set({
+                basket: basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created,
+            });
+
+
             setSucceeded(true);
             setError(null);
             setProcessing(false);
+            dispatch({
+                type: 'EMPTY_BASKET'
+            });
+
             navigate('/orders');
     });
 }
