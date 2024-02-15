@@ -1,6 +1,6 @@
 
  import React from 'react' 
-import "./CheckOut.css"
+import './CheckOut.css'
 import Subtotal from './Subtotal'
 import CheckoutProduct from './CheckoutProduct'
 

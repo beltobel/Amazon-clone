@@ -1,14 +1,14 @@
-.chechoutProduct {
+.checkoutProduct {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-.chechoutProduct__info
+} 
+.checkoutProduct__info
 {
     padding-left: 20px;
 }
 
-.chechoutProduct__info > button
+.checkoutProduct__info > button
 {
     background: #f0c14b;
     border: 1px solid;
@@ -23,11 +23,11 @@
     width: 180px;
     height: 180px;
 }
-.chechoutProduct__rating
+.checkoutProduct__rating
 {
     display: flex;
 }
-.chechoutProduct__title
+.checkoutProduct__title
 {
     font-size: 17px;
     font-weight: 800;

@@ -2,24 +2,31 @@
  import React from 'react'
 import './Home.css';
 import Product from '../products/Product';
+import Footer from '../Footer/Footer';
 function Home() {
   return ( 
     <div className='home'>
         <div className='home__container'>
             <img className='home__image'
-            src ="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/717RUPA1bDL._SX3000_.jpg"
+            // src ="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/717RUPA1bDL._SX3000_.jpg"
             // src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71j8damPo5L._SX3000_.jpg" alt="image"
+
+            src ="https://m.media-amazon.com/images/I/61GfWyQax7L._SX3000_.jpg"
              />
+             
  
             <div className='home__row'>
 
                 <Product 
                 id="12321341"
-                title="Andromeda, Princess of Ethiopia: The Legend in The Stars in Amharic and English  "
+                title="Lunar New Year "
                 price= {4.99}
                 rating={5}
                 
-                image="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61R2tZtsFkL._AC_UY218_.jpg"
+                // image="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61R2tZtsFkL._AC_UY218_.jpg"
+                image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/LunarNY/Fuji_Single_card_Lunar_New_Year_Graphics_1x_EN._SY304_CB585956471_.jpg"
+
+                
                 />
 
                 <Product
@@ -68,6 +75,18 @@ function Home() {
                 rating={4}
                 image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
                 />
+                 <Product 
+                id="3254354345"
+                title="New year, now you"
+                price={598.99}
+                rating={4}
+                // image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
+
+                image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/NYNY/Fuji_NYNY_Card_1x_12_Dec_EN._SY304_CB586552015_.jpg"
+                
+                
+                />
+                
             </div>
 
             <div className='home__row'>
@@ -79,7 +98,13 @@ function Home() {
                 rating={4}
                 image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
                 />
+                
             </div>
+           
+
+        </div>
+        <div className ="footer">
+          <Footer/>
 
         </div>
 
